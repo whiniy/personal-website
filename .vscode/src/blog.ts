@@ -9,14 +9,14 @@ const blogs: Blog[] = [
     {
         title: "SLO Days",
         date: "August 17 - 18",
-        description: "SLO Days is a two day overnight stay at Cal Poly SLO which is supposed to serve as an orientation event for incoming students. Presentations are held and food is served buffet-style.",
+        description: "Blog 1",
         slug: "blog1.html"
     },
 
     {
         title: "WOW Week",
         date: "September 15 - 23",
-        description: "Week of Welcome is a week long event where people are grouped and go on fun trips on and off campus. It was very fun in my opinion!",
+        description: "Blog 2",
         slug: "blog2.html",
     },
 ];

@@ -4,7 +4,6 @@ import Link from "next/link";
 
 export default function Contact() {
     return (
-      <header>
         <main>
             <h1 className = {style.page_title}></h1>
             <div className = {style.project}>
@@ -16,6 +15,5 @@ export default function Contact() {
                 <Link href="index.html" id="learnMore">Learn More</Link>
             </div>
         </main>
-      </header>
     );
 }

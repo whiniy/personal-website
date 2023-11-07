@@ -3,7 +3,6 @@ import React from "react";
 
 export default function Contact() {
     return (
-      <header>
         <main>
           <h1 className = {style.page_title}></h1>
           <form id="contact_form">
@@ -17,6 +16,5 @@ export default function Contact() {
               <input type="submit" required/>
           </form>
         </main>
-      </header>
     );
 }

@@ -5,7 +5,6 @@ export default function Resume() {
     return (
       // replace everything in between the <header> & <header /> tags
       // with your resume code from your earlier milestones
-      <header>
         <main>
         <Link id="downloadPDF" href="resume.pdf" download>Download Resume</Link>
         <div className = {style.resume}>
@@ -69,7 +68,6 @@ export default function Resume() {
             </section>
         </div>
         </main>
-      </header>
     );
 }
   

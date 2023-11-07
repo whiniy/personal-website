@@ -1,22 +1,24 @@
 #downloadPDF {
-    font-weight: bold;
-    color: rgb(255, 72, 218);
-    padding-left: 90%;
+  font-weight: bold;
+  color: rgb(255, 72, 218);
+  padding-left: 90%;
 }
 
 #downloadPDF:hover {
-    color: rgb(87, 0, 169);
+  color: rgb(87, 0, 169);
 }
 
-.section-title {
-    margin-left: 60px;
-    color: rgb(255, 72, 218);
+.section_title {
+  margin-left: 60px;
+  color: rgb(255, 72, 218);
 }
 
-.entry-title, .entry-info {
-    padding-left: 60px;
+.entry_title,
+.entry_info {
+  padding-left: 60px;
 }
 
-.skill-list, .course-list {
-    padding-left: 80px;
+.skill_list,
+.course_list {
+  padding-left: 80px;
 }

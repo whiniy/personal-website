@@ -10,7 +10,7 @@ export default function Navbar() {
         <nav className ={style.navbar}>
             <h1 className ={style.logo}></h1>
             <Link href="index.html" className = {style.personalWebsite}>personal website</Link>
-            <ul className ="nav-list">
+            <ul className = {style.nav_list}>
                 <li className = {style.navA}><a className = {style.a} href="index.html">Home</a></li>
                 <li className = {style.navA}><a className = {style.a} href="blog.html">Blog</a></li>
                 <li className = {style.navA}><a className = {style.a} href="portfolio.html">Portfolio</a></li>

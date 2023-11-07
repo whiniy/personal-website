@@ -3,10 +3,11 @@ body {
     margin-top: 40px;
 }
 
-a {
+.a {
     text-decoration: none;
     color: rgb(87, 0, 169);
 }
+
 #learnMore {
     font-weight: bold;
     display: block;
@@ -14,7 +15,7 @@ a {
     text-align:center;
 }
 
-.page-title {
+.page_title {
     font-size: 30px;
     padding: 25px;
     color: rgb(255, 72, 218);
@@ -33,7 +34,7 @@ a {
     padding: 18px;
 }
 
-a:hover {
+.a:hover {
     color: rgb(249, 160, 255);
 }
 
@@ -52,7 +53,7 @@ a:hover {
     margin-right: auto;
 }
 
-.about-text {
+.about_text {
     color: rgb(87, 0, 169);
     padding: 55px;
 }
@@ -67,21 +68,21 @@ a:hover {
     
 }
 
-img.project-details {
+img.project_details {
     height: 350px;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
-.project-name {
+.project_name {
     font-size: 25px;
     font-weight: bold;
     text-align: center;
     color: rgb(87, 0, 169);
 }
 
-.project-description {
+.project_description {
     font-size: 15px;
     text-align: center;
     color: rgb(87, 0, 169);
@@ -97,15 +98,15 @@ img.project-details {
     color: rgb(87, 0, 169);
 }
 
-.section-title {
+.section_title {
     margin-left: 60px;
     color: rgb(255, 72, 218);
 }
 
-.entry-title, .entry-info {
+.entry_title, .entry_info {
     padding-left: 60px;
 }
 
-.skill-list, .course-list {
+.skill_list, .course_list {
     padding-left: 80px;
 }

@@ -21,7 +21,7 @@ const blogs: Blog[] = [
     },
 ];
 
-
+export type { Blog as BlogType }
 
     
     

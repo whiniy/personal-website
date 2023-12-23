@@ -32,6 +32,7 @@ export default async function Home() {
                         description={blog.description}
                         date={blog.date}
                         slug={blog.slug}
+                        comments={blog.comments}
                         />
                     )}
                 </main>

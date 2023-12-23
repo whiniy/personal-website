@@ -38,8 +38,6 @@ function iterate() {
 
 }
 
-
-   
 iterate();
 
 

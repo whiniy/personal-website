@@ -1,3 +1,4 @@
+
 type Blog = {
     title: string;
     date: string;
@@ -21,9 +22,5 @@ const blogs: Blog[] = [
     },
 ];
 
-export type { Blog as BlogType }
 
-    
-    
-        
-    
+export type { Blog as BlogType }

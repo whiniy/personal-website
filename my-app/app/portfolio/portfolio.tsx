@@ -2,7 +2,7 @@ import style from "./portfolio.module.css";
 import React from "react";
 import Link from "next/link";
 
-export default function Contact() {
+export default function Portfolio() {
     return (
         <main>
             <h1 className = {style.page_title}></h1>

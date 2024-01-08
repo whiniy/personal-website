@@ -26,8 +26,8 @@ export default async function Home() {
                 <main>
                     <h2 className = {style.blog_title}>Blog!</h2>
                     <ol>
-                        {b.map((BlogPreview: any) => (
-                            <li>{BlogPreview.title}</li>
+                        {b.map((blogs: any) => (
+                            <li>{blogs.title}</li>
                         ))}
                     </ol>
                     {/*{b.map(blog => 

@@ -1,5 +1,4 @@
 import connectDB from "../../../.vscode/src/helpers/db"
-import { BlogType } from "../blogData"
 import Blog from "../../../.vscode/src/database/blogSchema"
 import BlogPreview from "@/components/blogPrev"
 import style from "./blog.module.css";
@@ -22,38 +21,29 @@ export default async function Home() {
     const b = await getBlogs()
     if (b) {
         return (
-            <div>
-                <main>
+            <main>
+                <div>
                     <h2 className = {style.blog_title}>Blog!</h2>
-                    <ol>
-                        {b.map((blogs: any) => (
-                            <li>{blogs.title}</li>
-                        ))}
-                    </ol>
-                    {/*{b.map(blog => 
+                    {b.map((blog: any) => (
                         <BlogPreview 
-
-                        title={blog.title}
-                        description={blog.description}
-                        date={blog.date}
-                        slug={blog.slug}
-                        comments={blog.comments}
+                            title={blog.title}
+                            description={blog.description}
+                            date={blog.date}
+                            slug={blog.slug}
                         />
-                    )}*/}
-                </main>
-            </div>
+                    ))}
+                </div>
+            </main>
         )
     }
     else {
         return (
-            <div>
-                <main>
+            <main>
+                <div>
                 <h3 className = {style.blog_title}>No blogs found!</h3>
-                </main>
-            </div>
-
+                </div>
+            </main>
         )
     }
-
 }
 

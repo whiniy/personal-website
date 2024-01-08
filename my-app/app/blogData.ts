@@ -24,3 +24,4 @@ const blogs: Blog[] = [
 
 
 export type { Blog as BlogType }
+export default blogs;

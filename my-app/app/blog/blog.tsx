@@ -25,7 +25,12 @@ export default async function Home() {
             <div>
                 <main>
                     <h2 className = {style.blog_title}>Blog!</h2>
-                    {b.map(blog => 
+                    <ol>
+                        {b.map((BlogPreview: any) => (
+                            <li>{BlogPreview.title}</li>
+                        ))}
+                    </ol>
+                    {/*{b.map(blog => 
                         <BlogPreview 
 
                         title={blog.title}
@@ -34,7 +39,7 @@ export default async function Home() {
                         slug={blog.slug}
                         comments={blog.comments}
                         />
-                    )}
+                    )}*/}
                 </main>
             </div>
         )

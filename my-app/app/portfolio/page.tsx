@@ -27,7 +27,13 @@ export default async function Home() {
             <div>
                 <main>
                     <h2 className = {style.page_title}>Projects!</h2>
-                    {p.map(project => 
+                    <ol>
+                        {p.map((ProjectText:any) => (
+                            <li>{ProjectText.title}</li>
+                        ))} 
+                    </ol>
+                    
+                    {/*{p.map(project => 
                         <ProjectText
 
                         title={project.title}
@@ -35,7 +41,7 @@ export default async function Home() {
                         description={project.description}
                         link={project.link}
                         />
-                    )}
+                    )}*/}
                 </main>
             </div>
         )

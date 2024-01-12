@@ -1,20 +1,20 @@
 import React from 'react';
-import Link from "next/link"
-import style from './blogPreview.module.css'
-import { BlogType } from '@/app/blogData';
+import Link from 'next/link';
+import style from './general.module.css';
 
-export default function BlogPreview(props: BlogType) {
+type Blog = {
+  title: string;
+  date: string;
+  slug: string;
+}
+
+export default function BlogPreview(props: Blog) {
   return (
     <div>
-      <h2> {props.title} </h2>
-      <div>
-            <p>{props.date}</p>
-			<p>{props.description}</p>
-      <Link href={props.slug}>
-        <button className="blog-btn">Read More</button>
+      <Link href={`blog/${props.slug}`}>
+        <h3>{props.title} </h3>
       </Link>
-
-      </div>
-	  </div>
+      <p >{props.date}</p>
+    </div>
   );
 }

@@ -13,7 +13,7 @@ export default async function Home() {
             <BlogPreview {...blog._doc} />
           </div>
         ))}
-        </div>
+      </div>
     </main>
   );
   }

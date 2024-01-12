@@ -8,7 +8,7 @@ export default async function Home() {
     <main>
       <h1>My Blogs!</h1>
       <div>
-        {blogPosts.map((blog =>
+        {blogPosts.map(((blog:any) =>
           <div key={blog._id}>
             <BlogPreview {...blog._doc} />
           </div>

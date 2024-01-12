@@ -1,9 +1,4 @@
 "use client";
-import BlogPreview from '../../components/blogPrev';
-import Link from "next/link";
-import { NextRequest, NextResponse } from 'next/server'
-import connectDB from "@/helpers/db"
-import Blog from '../../../database/blogSchema';
 import React, {useState, useEffect} from 'react'
 
 type IParams = {

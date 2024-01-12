@@ -1,7 +1,7 @@
 import style from "./contact.module.css";
 import React from "react";
 
-export default function Contact() {
+export default function Home() {
     return (
         <main>
           <h1 className = {style.page_title}></h1>

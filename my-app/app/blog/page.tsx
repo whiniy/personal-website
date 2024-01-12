@@ -9,13 +9,11 @@ export default async function Home() {
       <h1>My Blogs!</h1>
       <div>
         {blogPosts.map((blog: { title: string; date: string; content: string; slug: string; }) =>(
-        <div key={blog.slug}>
-        <BlogPreview
+        <BlogPreview key={blog.slug}
             title={blog.title}
             date={blog.date}
             slug={blog.slug} 
         />
-        </div>
         ))}
         </div>
     </main>

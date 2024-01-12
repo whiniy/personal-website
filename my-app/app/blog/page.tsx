@@ -1,5 +1,6 @@
 import BlogPreview from "../components/blogPrev";
 import getBlogs from "../blogData";
+import Link from 'next/link';
 
 export default async function Home() {
   const blogPosts = await getBlogs();
@@ -7,17 +8,16 @@ export default async function Home() {
   return (
     <main>
       <h1>My Blogs!</h1>
-      <ul>
+      <div>
         {blogPosts.map((blog: { title: string; date: string; content: string; slug: string; }) =>(
-        <li key={blog.slug}>
-        <BlogPreview
-            title={blog.title}
-            date={blog.date}
-            slug={blog.slug} 
-        />
-        </li>
+        <div>
+        <Link href={`blog/${blog.slug}`}>
+          <h3>{blog.title} </h3>
+        </Link>
+        <p>{blog.date}</p>
+        </div>
         ))}
-        </ul>
+      </div>
     </main>
   );
   }

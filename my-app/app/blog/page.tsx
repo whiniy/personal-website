@@ -18,32 +18,19 @@ async function getBlogs() {
 }
 
 export default async function Home() {
-  const b = await getBlogs();
-  if (b) {
-    return (
-      <main>
-        <div>
-          <h2 className={style.blog_title}>Blog!</h2>
-          {b.map((blog: any) => (
-            <div key={blog.id}>
-              <BlogPreview
-                title={blog.title}
-                description={blog.description}
-                date={blog.date}
-                slug={blog.slug}
-              />
-            </div>
-          ))}
-        </div>
-      </main>
-    );
-  } else {
-    return (
-      <main>
-        <div>
-          <h3 className={style.blog_title}>No blogs found!</h3>
-        </div>
-      </main>
-    );
+  const blogPosts = await getBlogs();
+  if(blogPosts){
+  return (
+    <main>
+      <h1>Blogs</h1>
+      <div>
+        {blogPosts.map((blog =>
+          <div key={blog._id}>
+            <BlogPreview {...blog._doc} />
+          </div>
+        ))}
+      </div>
+    </main>
+  );
   }
 }

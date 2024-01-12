@@ -1,30 +1,25 @@
 "use client";
-import BlogPreview from '../../../components/blogPrev'
-import Link from "next/link";
-import { NextRequest, NextResponse } from 'next/server'
-import connectDB from "../../../../.vscode/src/helpers/db"
-import Blog from '../../../../.vscode/src/database/blogSchema'
 import React, {useState, useEffect} from 'react'
-
-type IParams = {
-    params: {
-        slug: string
-    }
-}
 
 type Comment = {
     user: string;
     comment: string;
-    time: string;
 }
 
-export default function Home({ params: {slug}}: IParams) {
+type IParams = {
+		params: {
+			slug: string
+		}
+}
+
+export default function Home({ params: { slug } }: IParams) {
     const [isLoading, setLoading] = useState(true)
-    const [blogData, setBlogData] = useState({
-        title: '',
-        date: '',
-        content:'',
-        comments: [],
+    const [portfolioData, setPortfolioData] = useState({
+        image: '',
+        projName: '',
+        description: '',
+        slug: '',
+        comments: []
       });
 
     const [newComment, setNewComment] = useState({
@@ -32,9 +27,9 @@ export default function Home({ params: {slug}}: IParams) {
         comment: '',
     });
 
-    /*const response = await fetch(`https://bootcamp-project-2023-beryl.vercel.app/api/blog/${slug}/comment`, {*/
-    /*const submitData = async () => {
-        const response = await fetch(``, {
+    /*
+    const submitData = async () => {
+        const response = await fetch(`https://bootcamp-project-2023-beryl.vercel.app/api/portfolio/${slug}/comment`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -44,8 +39,8 @@ export default function Home({ params: {slug}}: IParams) {
             comment: newComment.comment,
         }),
         });
-        const updatedBlogData = await response.json();
-        setBlogData(updatedBlogData);
+        const updatePortfolioData = await response.json();
+        setPortfolioData(updatePortfolioData);
 
         setNewComment({
             username: '',
@@ -53,36 +48,34 @@ export default function Home({ params: {slug}}: IParams) {
         });
     }
 
-
     useEffect(() => {
-        const fetchBlogData = async () => {
-          const response = await fetch(`https://bootcamp-project-2023-beryl.vercel.app/api/blog/${slug}`);
+        const fetchPortfolioData = async () => {
+          const response = await fetch(`https://bootcamp-project-2023-beryl.vercel.app/api/portfolio/${slug}`);
           const data = await response.json();
           console.log("data", data)
-          setBlogData(data);
+          setPortfolioData(data);
           setLoading(false)
+          console.log(portfolioData)
         };
 
-        fetchBlogData();
-      }, [slug]); */
-
-    return (
-    <main>
-        {isLoading ? (
-            <p>Just a moment...</p>
-        ) :
-        (<div>
-        <h2>{blogData.title}</h2>
-        <h3>Date: {blogData.date}</h3>
-        <p>{blogData.content}</p>
+        fetchPortfolioData();
+      }, [slug]); 
+*/
+    return(<main>
+        {isLoading ? (<p>Just a moment...</p>) :(
+        <div>
+        <h2>{portfolioData.projName}</h2>
+        <p>
+            {portfolioData.description}
+        </p>
+        
         </div>)}
-    </main>
+        </main>
     )
 }
 
-/* 
-<div>
-            {blogData.comments?.map((comment : Comment, index: number) => (
+/*<div>
+            {portfolioData.comments?.map((comment : Comment, index: number) => (
                     <div key = {index}> 
                         <p>{comment.user}</p>
                         <p>{comment.comment}</p>
@@ -107,5 +100,4 @@ export default function Home({ params: {slug}}: IParams) {
                     </div>
                 </form>
             </div>
-        </div>
-*/
+        </div>*/

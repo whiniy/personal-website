@@ -1,41 +1,38 @@
-import {IComment} from "../../.vscode/src/database/blogSchema"
+import { IComment } from "../../.vscode/src/database/blogSchema";
 
-
-{/* When we pass props, the name that we use to pass values
+{
+  /* When we pass props, the name that we use to pass values
 		is the key for the type
-*/}
-type CommentProps = {
-    comment: IComment;
+*/
 }
+type CommentProps = {
+  comment: IComment;
+};
 
-
-{/* Modularizing code into seperate functions is useful.
+{
+  /* Modularizing code into seperate functions is useful.
 		Makes your code look nicer and allows for better readability.
-	*/}
-function parseCommentTime(time: Date){
-	/*
-		Implementation up to you...
 	*/
-    const date = new Date(time).toLocaleString("en-US", 
-        {
-            weekday: "short",
-            month: "2-digit",
-            day: "2-digit",
-            year: "numeric",
-            hour12: true,
-        }
-    )
-    return date
+}
+function parseCommentTime(time: Date) {
+    return new Date(time).toLocaleString('en-US', {
+        month: "long",
+        day: "numeric",
+        year: "numeric",
+        hour: "numeric",
+        minute: "2-digit",
+        hour12: true,
+    });
 }
 
 function Comment({ comment }: CommentProps) {
-    return (
-        <div>
-            <h4>{comment.username}</h4>
-            <p>{comment.comment}</p>
-            <span>{parseCommentTime(comment.time)}</span>
-        </div>
-    );
+  return (
+    <div>
+      <h4>{comment.user}:</h4>
+      <p>{comment.comment}</p>
+      <span>{parseCommentTime(comment.time)}</span>
+    </div>
+  );
 }
 
 export default Comment;

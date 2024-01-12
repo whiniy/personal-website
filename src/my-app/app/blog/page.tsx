@@ -1,5 +1,5 @@
-import connectDB from "../../../.vscode/src/helpers/db"
-import Blog from "../../../.vscode/src/database/blogSchema"
+import connectDB from "../../helpers/db"
+import Blog from "../../database/blogSchema"
 import BlogPreview from "@/components/blogPrev"
 import style from "./blog.module.css";
 import blogs from "../blogData";

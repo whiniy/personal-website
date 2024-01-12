@@ -8,17 +8,17 @@ export default async function Home() {
     <main>
       <h1>My Blogs!</h1>
       <div>
-        {blogPosts.map((blog: any) =>(
+        {blogPosts.map((blog: { title: string; date: string; content: string; slug: string; }) =>(
+        <div key={blog.slug}>
         <BlogPreview
             title={blog.title}
             date={blog.date}
             slug={blog.slug} 
         />
+        </div>
         ))}
         </div>
     </main>
   );
   }
 }
-
-/*{ title: string; date: string; content: string; slug: string; }*/

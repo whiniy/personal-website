@@ -2,6 +2,7 @@ import connectDB from "../../../.vscode/src/helpers/db"
 import Blog from "../../../.vscode/src/database/blogSchema"
 import BlogPreview from "@/components/blogPrev"
 import style from "./blog.module.css";
+import blogs from "../blogData";
 
 
 async function getBlogs(){
@@ -25,12 +26,14 @@ export default async function Home() {
                 <div>
                     <h2 className = {style.blog_title}>Blog!</h2>
                     {b.map((blog: any) => (
+                        <div key={blog.id}>
                         <BlogPreview 
                             title={blog.title}
                             description={blog.description}
                             date={blog.date}
                             slug={blog.slug}
                         />
+                        </div>
                     ))}
                 </div>
             </main>

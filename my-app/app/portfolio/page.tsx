@@ -29,7 +29,7 @@ export default async function Home() {
                     <h2 className = {style.page_title}>Projects!</h2>
                     <ol>
                         {p.map((ProjectText:any) => (
-                            <li>{ProjectText.title}</li>
+                            <li key={ProjectText.id}>{ProjectText.title}</li>
                         ))} 
                     </ol>
                     

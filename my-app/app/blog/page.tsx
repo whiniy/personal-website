@@ -7,13 +7,15 @@ export default async function Home() {
   return (
     <main>
       <h1>My Blogs!</h1>
-      <div>
-        {blogPosts.map(((blog:any) =>
-          <div key={blog._id}>
-            <BlogPreview {...blog._doc} />
-          </div>
+      <div >
+        {blogPosts.map((blog: { title: string; date: string; content: string; slug: string; }) =>(
+        <BlogPreview 
+            title={blog.title}
+            date={blog.date}
+            slug={blog.slug} 
+        />
         ))}
-      </div>
+        </div>
     </main>
   );
   }

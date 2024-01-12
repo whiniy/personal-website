@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import { Schema } from "mongoose";
 
-type IComment = {
+export type IComment = {
     username: string;
     comment: string;
     time: Date;

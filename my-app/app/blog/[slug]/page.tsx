@@ -1,111 +1,52 @@
-"use client";
-import BlogPreview from '../../../components/blogPrev'
-import Link from "next/link";
-import { NextRequest, NextResponse } from 'next/server'
 import connectDB from "../../../../.vscode/src/helpers/db"
-import Blog from '../../../../.vscode/src/database/blogSchema'
-import React, {useState, useEffect} from 'react'
+import Blog from "../../../../.vscode/src/database/blogSchema"
+import style from "../blog.module.css"
 
-type IParams = {
-    params: {
-        slug: string
-    }
+type Props = {
+    params: { slug: string }
 }
 
-type Comment = {
-    user: string;
-    comment: string;
-    time: string;
+async function getOneBlog(slug: string){
+	await connectDB() // function from db.ts before
+
+	try {
+		
+	    const blog = await Blog.findOne({slug}).orFail()
+			// send a response as the blogs as the message
+	    return blog
+	} catch (err) {
+	    return null
+	}
 }
 
-export default function Home({ params: {slug}}: IParams) {
-    const [isLoading, setLoading] = useState(true)
-    const [blogData, setBlogData] = useState({
-        title: '',
-        date: '',
-        content:'',
-        comments: [],
-      });
+export default async function Home( p : Props) {
+	// now we can access slug
+	const slug = p.params.slug;
+    const oneBlog = await getOneBlog(slug);
 
-    const [newComment, setNewComment] = useState({
-        username: '',
-        comment: '',
-    });
-
-    /*const response = await fetch(`https://bootcamp-project-2023-beryl.vercel.app/api/blog/${slug}/comment`, {*/
-    /*const submitData = async () => {
-        const response = await fetch(``, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            user: newComment.username,
-            comment: newComment.comment,
-        }),
-        });
-        const updatedBlogData = await response.json();
-        setBlogData(updatedBlogData);
-
-        setNewComment({
-            username: '',
-            comment: '',
-        });
-    }
-
-
-    useEffect(() => {
-        const fetchBlogData = async () => {
-          const response = await fetch(`https://bootcamp-project-2023-beryl.vercel.app/api/blog/${slug}`);
-          const data = await response.json();
-          console.log("data", data)
-          setBlogData(data);
-          setLoading(false)
-        };
-
-        fetchBlogData();
-      }, [slug]); */
-
-    return (
-    <main>
-        {isLoading ? (
-            <p>Just a moment...</p>
-        ) :
-        (<div>
-        <h2>{blogData.title}</h2>
-        <h3>Date: {blogData.date}</h3>
-        <p>{blogData.content}</p>
-        </div>)}
-    </main>
-    )
-}
-
-/* 
-<div>
-            {blogData.comments?.map((comment : Comment, index: number) => (
-                    <div key = {index}> 
-                        <p>{comment.user}</p>
-                        <p>{comment.comment}</p>
-                    </div>
-            ))}
+    if (oneBlog) {
+        return (
             <div>
-                <form>
-                    <div>
-                    <label>Name:   </label>
-                    <textarea id="userName" 
-                        onChange={(e) => setNewComment({ ...newComment, username: e.target.value })}
-                        required/>
-                    </div>
-                    <div>
-                    <label>Comment:   </label>
-                    <textarea
-                        onChange={(e) => setNewComment({ ...newComment, comment: e.target.value })}
-                        required/>
-                    </div>
-                    <div>
-                        <button type="button" onClick={submitData}>Submit Comment</button>
-                    </div>
-                </form>
+            <h2> {oneBlog.title} </h2>
+            <div>
+                <p>{oneBlog.date}</p>
+                <p>{oneBlog.description}</p>
             </div>
-        </div>
-*/
+            <div>
+                {oneBlog.comments}
+            </div>
+            </div>
+        )
+    }
+    else {
+        return (
+            <div>
+                <main>
+                <h3 className = {style.blog_title}>No blogs found!</h3>
+                </main>
+            </div>
+        )
+    }
+
+
+}

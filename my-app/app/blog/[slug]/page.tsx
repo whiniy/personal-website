@@ -1,52 +1,42 @@
-import connectDB from "../../../../.vscode/src/helpers/db"
-import Blog from "../../../../.vscode/src/database/blogSchema"
-import style from "../blog.module.css"
+"use client";
+import React, {useState, useEffect} from 'react'
 
-type Props = {
-    params: { slug: string }
+type IParams = {
+    params: {
+        slug: string
+    }
 }
 
-async function getOneBlog(slug: string){
-	await connectDB() // function from db.ts before
-
-	try {
-		
-	    const blog = await Blog.findOne({slug}).orFail()
-			// send a response as the blogs as the message
-	    return blog
-	} catch (err) {
-	    return null
-	}
+type Comment = {
+    user: string;
+    comment: string;
+    time: string;
 }
 
-export default async function Home( p : Props) {
-	// now we can access slug
-	const slug = p.params.slug;
-    const oneBlog = await getOneBlog(slug);
+export default function Home({ params: {slug}}: IParams) {
+    const [isLoading, setLoading] = useState(true)
+    const [blogData, setBlogData] = useState({
+        title: '',
+        date: '',
+        content:'',
+        comments: [],
+      });
 
-    if (oneBlog) {
-        return (
-            <div>
-            <h2> {oneBlog.title} </h2>
-            <div>
-                <p>{oneBlog.date}</p>
-                <p>{oneBlog.description}</p>
-            </div>
-            <div>
-                {oneBlog.comments}
-            </div>
-            </div>
-        )
-    }
-    else {
-        return (
-            <div>
-                <main>
-                <h3 className = {style.blog_title}>No blogs found!</h3>
-                </main>
-            </div>
-        )
-    }
+    const [newComment, setNewComment] = useState({
+        username: '',
+        comment: '',
+    });
 
-
+    return (
+    <main>
+        {isLoading ? (
+            <p>Just a moment...</p>
+        ) :
+        (<div>
+        <h2>{blogData.title}</h2>
+        <h3>Date: {blogData.date}</h3> 
+        <p>{blogData.content}</p>
+        </div>)}
+    </main>
+    )
 }

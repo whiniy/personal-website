@@ -1,7 +1,7 @@
 
 import { NextRequest, NextResponse } from 'next/server'
-import connectDB from "../../../../.vscode/src/helpers/db"
-import blogSchema from "../../../../.vscode/src/database/blogSchema"
+import connectDB from "../../../helpers/db"
+import blogSchema from "../../../database/blogSchema"
 
 type IParams = {
 		params: {

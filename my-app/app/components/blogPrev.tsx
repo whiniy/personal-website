@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import style from './general.module.css';
 
 type Blog = {
   title: string;
@@ -14,7 +13,7 @@ export default function BlogPreview(props: Blog) {
       <Link href={`blog/${props.slug}`}>
         <h3>{props.title} </h3>
       </Link>
-      <p >{props.date}</p>
+      <p>{props.date}</p>
     </div>
   );
 }

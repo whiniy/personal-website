@@ -1,6 +1,5 @@
 import BlogPreview from "../components/blogPrev";
 import getBlogs from "../blogData";
-import style from "../blog/blog.module.css";
 
 export default async function Home() {
   const blogPosts = await getBlogs();

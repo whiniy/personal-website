@@ -19,7 +19,7 @@ const projectSchema = new Schema<IProject>({
 })
 
 // defining the collection and model
-const Project = mongoose.models['projects'] ||
-mongoose.model('projects', projectSchema);
+const Project = mongoose.models["projects"] ||
+mongoose.model("projects", projectSchema);
 
 export default Project;

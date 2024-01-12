@@ -8,14 +8,14 @@ type Blog = {
 const blogs: Blog[] = [
     {
         title: "SLO Days",
-        date: "August 17 - 18",
+        date: "09/17/2023",
         description: "Blog 1",
         slug: "blog1.html"
     },
 
     {
         title: "WOW Week",
-        date: "September 15 - 23",
+        date: "09/15/2023",
         description: "Blog 2",
         slug: "blog2.html",
     },

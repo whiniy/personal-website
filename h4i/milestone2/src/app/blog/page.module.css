@@ -1,0 +1,21 @@
+.title {
+    font-size: 30px;
+    color: rgb(245, 104, 255);
+    padding-left: 55px;
+    padding-bottom: 10px;
+}
+
+.container {
+    padding-left: 55px;
+    color: rgb(245, 104, 255);
+}
+
+.title {
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+
+.date {
+    font-size: 20px;
+    font-style: italic;
+}

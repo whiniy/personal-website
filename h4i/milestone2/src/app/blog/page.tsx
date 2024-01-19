@@ -2,6 +2,7 @@ import React from "react"
 import connectDB from "../../../backend/helpers/db"
 import BlogS from "../../../backend/database/blogSchema"
 import BlogPrev from "@/components/blogPrev/blogPrev"
+import style from "../blog/page.module.css"
 
 async function getBlogs(){
 	await connectDB() // function from db.ts before
@@ -29,12 +30,11 @@ export default async function Blog() {
     } else {
         return (
             <div>
-                <h1>My Blogs!</h1>
-                <br></br>
+                <h1 className={style.title}>My Blogs!</h1>
                 <div>
                     {blogs.map(blog => 
-                    <div key={blog.id}>
-                        <BlogPrev 
+                    <div key={blog.id} className={style.blogPrev}>
+                        <BlogPrev
                             slug={blog.slug} 
                             title={blog.title}
                             date={blog.date}

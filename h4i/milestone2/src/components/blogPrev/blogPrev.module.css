@@ -1,0 +1,27 @@
+.container {
+    color: rgb(87, 0, 169);
+    padding-left: 55px;
+    padding-bottom: 20px;
+}
+
+.a {
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.a:hover {
+    color: rgb(245, 104, 255);
+    text-decoration: underline;
+}
+
+.date {
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.description {
+    font-size: 16px;
+    font-weight: 500;
+}

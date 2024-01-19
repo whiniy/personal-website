@@ -1,15 +1,16 @@
 import React from 'react';
 import Link from 'next/link';
 import { BlogPreview } from '@/app/blogData';
+import style from "../blogPrev/blogPrev.module.css"
 
 export default function BlogPrev(props: BlogPreview) {
   return (
-    <div>
-      <Link href={`blog/${props.slug}`}>
-        <h3>{props.title} </h3>
+    <div className={style.container}>
+      <Link className={style.a} href={`blog/${props.slug}`}>
+        <h3 >{props.title} </h3>
       </Link>
-      <p>{props.date}</p>
-      <p>{props.description}</p>
+      <p className={style.date}>{props.date}</p>
+      <p className={style.description}>{props.description}</p>
     </div>
   );
 }

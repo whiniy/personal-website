@@ -32,9 +32,9 @@ export default async function Blog() {
                 <h1>My Blogs!</h1>
                 <br></br>
                 <div>
-                    {blogs.map((blog: any) => 
+                    {blogs.map(blog => 
                     <div>
-                        <BlogPrev
+                        <BlogPrev key={blog.id}
                             slug={blog.slug} 
                             title={blog.title}
                             date={blog.date}

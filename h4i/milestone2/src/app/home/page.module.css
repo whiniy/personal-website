@@ -1,0 +1,29 @@
+.column {
+  float: left;
+  width: 50%;
+}
+
+.row {
+  align-self: center;
+  width: fit-content;
+  padding-top: 30px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.content {
+  font-size: 20px;
+  padding: 80px;
+  line-height: 2;
+  margin: auto;
+  display: block;
+}
+
+.homePic {
+  margin: auto;
+  display: block;
+}

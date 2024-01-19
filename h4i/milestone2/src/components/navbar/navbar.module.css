@@ -1,0 +1,37 @@
+.nav {
+    margin-top: 50px;
+}
+
+.navTitle {
+    text-decoration: none;
+    font-size: 50px;
+    padding: 15px;
+    margin: 40px;
+    font-weight: bold;
+    color: black;
+}
+
+.navTitle:hover {
+    color: rgb(87, 0, 169);
+}
+
+.navA {
+    font-size: 25px;
+    text-transform: lowercase;
+    list-style-type: none;
+    overflow: hidden;
+    display: block;
+    font-weight: bold;
+    float: left;
+    padding: 15px;
+    margin-right: 40px;
+}
+
+.a:hover {
+    color: rgb(245, 104, 255);
+}
+
+.a {
+    text-decoration: none;
+    color: rgb(87, 0, 169);
+}

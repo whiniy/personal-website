@@ -1,0 +1,46 @@
+.container {
+    margin-left: 55px;
+}
+
+.downloadPDF {
+    font-weight: bold;
+    color: rgb(245, 104, 255);
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 82.5%;
+}
+  
+.downloadPDF:hover {
+    color: rgb(87, 0, 169);
+}
+  
+.section_title {
+    color: rgb(245, 104, 255);
+    font-weight: bolder;
+    font-size: 30px;
+}
+  
+.entry_title {
+  font-size: 20px;
+  margin-top: 5px;
+  font-weight: 400;
+}
+
+.entry_date{
+  font-size: 18px;
+  font-weight: 400;
+  color: rgb(87, 0, 169);
+}
+
+.entry_info {
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 35px;
+  line-height: 1.75;
+}
+
+.misc {
+  font-size: 16;
+  font-weight: 500;
+  font-style: italic;
+}

@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react'
-import emailjs from "../../../../node_modules/@emailjs/browser"
+import emailjs from '@emailjs/browser'
 import style from "../contactForm/contactForm.module.css"
 
 const EmailForm = () => {

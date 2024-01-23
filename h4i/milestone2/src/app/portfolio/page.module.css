@@ -27,3 +27,15 @@
     width: 70%;
     font-size: 17px;
 }
+
+.a:hover {
+    color: rgb(87, 0, 169);
+    text-decoration: underline;
+}
+
+.a {
+    text-decoration: none;
+    color: rgb(245, 104, 255);
+    font-weight: bolder;
+    font-style: italic;
+}

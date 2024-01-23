@@ -1,0 +1,41 @@
+[
+    {
+        "slug": "blog1",
+        "title": "SLO Days",
+        "date": "2023-09-17",
+        "image": "/sloDays.jpeg",
+        "alt": "A picture of the Cal Poly sunset view on campus!",
+        "description": "This is how my orientation at Cal Poly went.",
+        "content": "My first day of SLO Days had started out rough. There was a lot of traffic and construction sites on the way to Cal Poly from where I live. I was also driving and the drive is a little over 3 hours long. I ended up being 20 minutes late to the first event and was about to fall asleep the entire day. Overall, the day was hot and I was not in a social mood nor was I in the mood to sit through a bunch of presentations. SLO Days ended short for me and my friends. We left to grab breakfast and headed home early. I couldn't take it anymore. On the way back home, my car had an issue. My tires were losing air pressure and I was confused as to why that is. We believe it must've been the change in temperature that made my car tires lose so much pressure. That was the day me and my friends learned how to insert air into car tires at a gas station. Even then, it didn't work that well and I had to visit my car dealership back at home to situate my car."
+    },
+    {
+        "slug": "blog2",
+        "title": "WOW Week",
+        "date": "2023-10-15",
+        "image": "/wowWeek.jpeg",
+        "alt": "A picture of me and my WOW group!",
+        "description": "My first two weeks at Cal Poly were so fun!",
+        "content": "On the first day of Wow Week, I really was not into it. It was a hot day, and I was tired from the drive as well as from moving in. However, I ended up in a great Wow group as I made a new friend and found an old friend from high school. My Wow leaders were also the best people I could ask for. I am extremely grateful for the amount of work and dedication they put into making the first week fun and entertaining. By the end of the week, I no longer felt super awkward and lost. I had gained a friend and got more comfortable with talking to everyone. It was super fun getting many opportunities to explore the campus as well as places off-campus such as downtown and hikes. I even pledged for the Fraternity that both my Wow leaders are in!"
+    }
+]
+
+[
+    {
+        "slug": "h4iWebsite",
+        "title": "Hack4Impact Website",
+        "image": "/h4iWebsite.png",
+        "alt": "A screenshot of a personal website I created using VSCode aka this website!",
+        "description": "Small and simple website done with Visual Studio Code.",
+        "content": "Hack4Impact is a coding club that I joined in my first year at Cal Poly during fall quarter. I am really passionate about volunteer work and my academic passions, so I thought that this club was perfect for me. I was so excited to find out that I had been accepted to be a Developer. This website is my bootcamp project, and I can't wait until I get to work on an actual non-profit website!",
+        "link": "https://bootcamp-project-2023-smoky.vercel.app/home"
+    },
+    {
+        "slug": "personalityQuiz",
+        "title": "Personality Quiz",
+        "image": "/personalityQuiz.png",
+        "alt": "This is screenshot of a bootleg Buzzfeed quiz I made a while back when I did a two week coding program over the summer!",
+        "description": "Short, fun quiz using one of my favorite TV shows, The Vampire Diaries.",
+        "content": "A few years ago, I was a participant in the GirlsWhoCode two week Summer Immersion Program. One of my projects was a 'Buzzfeed' personality quiz. I learn how to make buttons and use JavaScript when making this website.",
+        "link": "https://ecc87999-07f7-4f11-a81f-7c52b6af812c-00-iawvnlvcmzmp.janeway.replit.dev/"
+    }
+]

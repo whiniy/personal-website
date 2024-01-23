@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { BlogPreview } from '@/app/blogData';
+import { BlogPreview } from '../../../backend/database/blogData';
 import style from "../blogPrev/blogPrev.module.css"
 
 export default function BlogPrev(props: BlogPreview) {

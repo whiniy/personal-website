@@ -7,7 +7,7 @@ export default function Home() {
         <div className= {style.container}>
             <div className= {style.row}>
                 <div className= {style.column}>
-                    <Image width={0} height={0} sizes="100vw" style={{ width: '50%', height: 'auto' }} className= {style.homePic} src= "/IMG_6018.jpeg" alt="A video of an image of the sky and clouds being too big"></Image>
+                    <Image width={0} height={0} sizes="100vw" style={{ width: '50%', height: 'auto' }} className= {style.homePic} src= "/homePic.jpeg" alt="A video of an image of the sky and clouds being too big"></Image>
                 </div>
                 <div className= {style.column}>
                     <p className= {style.content}>Hi! My name is Winnie Trinh, and I am a <em>first year Computer Science major</em> at <strong>Cal Poly 

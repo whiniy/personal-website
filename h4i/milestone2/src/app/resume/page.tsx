@@ -73,8 +73,8 @@ export default function Resume() {
                 <section>
                 <h2 className= {style.section_title}>Projects</h2>
                 <div>
-                    <h3 className= {style.entry_title}>Hack4Impact Website</h3>
-                    <p className= {style.misc}>Small and simple website done with Visual Studio Code</p>
+                    <h3 className= {style.entry_title}><b>Hack4Impact Website</b></h3>
+                    <p className= {style.misc}>Small and simple website done with Visual Studio Code.</p>
                 </div>
                 </section>
             </div>

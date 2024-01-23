@@ -33,14 +33,14 @@ export default async function Blog() {
                 <h1 className={style.title}>My Blogs!</h1>
                 <div>
                     {blogs.map(blog => 
-                    <div key={blog.id} className={style.blogPrev}>
-                        <BlogPrev
-                            slug={blog.slug} 
-                            title={blog.title}
-                            date={blog.date}
-                            description={blog.description}
-                        />
-                    </div>
+                        <div key={blog.id}>
+                            <BlogPrev
+                                slug={blog.slug} 
+                                title={blog.title}
+                                date={blog.date}
+                                description={blog.description}
+                            />
+                        </div>
                     )}
                 </div>
             </div>

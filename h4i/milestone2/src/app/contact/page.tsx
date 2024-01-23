@@ -6,36 +6,36 @@ export default function Contact() {
         <div className = {style.container}>
             <h1 className= {style.page_title}>Contact Me!</h1>
             <form>
-                <div className= {style.row}>
-                    <div className= {style.column}>
+                <div>
+                    <div>
                         <label htmlFor="name" className = {style.label}>Name</label>
                     </div>
                     
-                    <div className= {style.column}>
+                    <div>
                         <input type="text" className = {style.input} required/>
                     </div>
                 </div>
                 
                 <br></br>
 
-                <div className= {style.row}>
-                    <div className= {style.column}>
+                <div>
+                    <div>
                         <label htmlFor="email" className = {style.label}>Email</label>
                     </div>
                     
-                    <div className= {style.column}>
+                    <div>
                         <input type="email" className = {style.input} required/>
                     </div>
                 </div>
 
                 <br></br>
 
-                <div className= {style.row}>
-                    <div className= {style.column}>
+                <div>
+                    <div>
                         <label htmlFor="message" className = {style.label}>Message</label>
                     </div>
                     
-                    <div className= {style.column}>
+                    <div>
                         <textarea className = {style.message}></textarea>
                     </div>
                 </div>

@@ -1,16 +1,16 @@
-.page_title {
-    font-size: 30px;
-    color: rgb(245, 104, 255);
+.addAComment {
+    font-size: 22px;
+    font-style: italic;
 }
 
-.container {
-    padding-left: 55px;
-    line-height: 2;
+.labelContainer {
+    padding-bottom: 5px;
+    padding-top: 12px;
 }
 
 .label {
-    font-size: 20px;
-    padding-bottom: 10px;
+    font-size: 18px;
+    color: black;
 }
 
 .input {
@@ -28,24 +28,10 @@
     
 }
 
-.message {
-    width: 50%;
-    height: 60px;
-    border: none;
-    border-bottom: 2px solid rgb(245, 104, 255);
-    background-color: rgb(254, 203, 255);
-}
-
-.message:focus {
-    outline: none;
-    border-bottom: 2px solid rgb(194, 117, 246);
-    background-color:  rgb(226, 185, 254);
-}
-
 .submit {
     font-size: 16px;
     margin-top: 20px;
-    padding: 15px;
+    padding: 10px;
     border: none;
     background-color: rgb(253, 119, 255);
     color: white;

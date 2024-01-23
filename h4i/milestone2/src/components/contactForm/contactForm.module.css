@@ -1,0 +1,51 @@
+.label {
+    font-size: 20px;
+}
+
+.input {
+    width: 50%;
+    height: 30px;
+    border: none;
+    border-bottom: 2px solid rgb(245, 104, 255);
+    background-color: rgb(254, 203, 255);
+    
+}
+
+.input:focus {
+    background-color:  rgb(226, 185, 254);
+    outline: none;
+    border-bottom: 2px solid rgb(194, 117, 246);
+    
+}
+
+.message {
+    width: 50%;
+    height: 60px;
+    border: none;
+    border-bottom: 2px solid rgb(245, 104, 255);
+    background-color: rgb(254, 203, 255);
+}
+
+.message:focus {
+    outline: none;
+    border-bottom: 2px solid rgb(194, 117, 246);
+    background-color:  rgb(226, 185, 254);
+}
+
+.submit {
+    font-size: 16px;
+    margin-top: 20px;
+    padding: 13px;
+    border: none;
+    background-color: rgb(253, 119, 255);
+    color: white;
+    border-radius: 5px;
+}
+
+.submit:hover {
+    background-color: rgb(199, 114, 255);
+}
+
+.divContainer {
+    padding-bottom: 15px;
+}

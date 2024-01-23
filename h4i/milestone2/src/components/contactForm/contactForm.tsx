@@ -9,7 +9,7 @@ const EmailForm = () => {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: any) => {
         e.preventDefault();
 
         const serviceId = 'service_347w0rr';

@@ -21,7 +21,7 @@ type IBlog = {
 
 const commentSchema = new Schema<IComment>({
     username: { type: String, required: true },
-    time: { type: Date, required: false, default: new Date() },
+    time: { type: Date, required: true, default: new Date() },
     comment: { type: String, required: true },
 });
 

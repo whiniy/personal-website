@@ -27,3 +27,13 @@
     width: 70%;
     font-size: 17px;
 }
+
+.commentsTitle {
+    font-size: 22px;
+    font-style: italic;
+    padding-bottom: 10px;
+}
+
+.commentsContainer {
+    padding-top: 20px;
+}

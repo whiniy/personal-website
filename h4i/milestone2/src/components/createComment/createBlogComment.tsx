@@ -7,7 +7,7 @@ function refreshComments(){
     window.location.reload(); 
 } 
 
-export default function CreateComment(blogPage: any) {
+export default function CreateComment(Page: any) {
     const [comment, setComment] = useState("");
     const [username, setUser] = useState("");
     const time = new Date()
@@ -17,7 +17,7 @@ export default function CreateComment(blogPage: any) {
     const addComment = async (event: any) => {
         event.preventDefault();
         const data = { username, comment, time };
-        const response = await fetch(`/api/${blogPage.slug}/comment`, {
+        const response = await fetch(`/api/blog/${Page.slug}/comment`, {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data)
@@ -32,7 +32,7 @@ export default function CreateComment(blogPage: any) {
             <form onSubmit={addComment}>
                 <div>
                     <div className={style.labelContainer}>
-                    <label className={style.label}>Username</label>
+                    <label className={style.label}>Name</label>
                     </div>
                     <div>
                     <input type="text" id="name" onChange={changeUser} className={style.input}/>

@@ -39,3 +39,13 @@
     font-weight: bolder;
     font-style: italic;
 }
+
+.commentsTitle {
+    font-size: 22px;
+    font-style: italic;
+    padding-bottom: 10px;
+}
+
+.commentsContainer {
+    padding-top: 20px;
+}

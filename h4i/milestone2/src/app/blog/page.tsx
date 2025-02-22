@@ -3,6 +3,7 @@ import connectDB from "../../../backend/helpers/db"
 import BlogS from "../../../backend/database/blogSchema"
 import BlogPrev from "@/components/blogPrev/blogPrev"
 import style from "../blog/page.module.css"
+import NavMenu from "@/components/dropDownNav/navMenu"
 
 async function getBlogs(){
 	await connectDB() // function from db.ts before
@@ -30,6 +31,7 @@ export default async function Blog() {
     } else {
         return (
             <div>
+                <div className = {style.navDiv}><NavMenu/></div>
                 <h1 className={style.title}>My Blogs!</h1>
                 <div>
                     {blogs.map(blog => 

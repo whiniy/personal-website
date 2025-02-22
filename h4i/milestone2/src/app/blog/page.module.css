@@ -37,3 +37,10 @@
 .commentsContainer {
     padding-top: 20px;
 }
+
+.navDiv {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}

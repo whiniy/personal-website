@@ -1,29 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Tinos&display=swap');
+
 .column {
-  float: left;
-  width: 50%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
 .row {
+  display: flex;
+  justify-content: center;
   align-self: center;
-  width: fit-content;
   padding-top: 30px;
 }
 
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+.textColumn {
+  font-family: 'Times New Roman', Times, serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  padding-top: 5%;
 }
 
-.content {
+.name {
+  font-size: 90px;
+}
+
+.school {
   font-size: 20px;
-  padding: 80px;
-  line-height: 2;
-  margin: auto;
-  display: block;
+  font-style: italic;
+  font-family: Tinos;
+}
+
+.school,
+.name {
+  align-self: flex-start;
+  width: 100%;        
+  text-align: left;    
+}
+
+.text {
+  align-items: left;
 }
 
 .homePic {
-  margin: auto;
   display: block;
+}
+
+.nav {
+  align-self: flex-end;
+  width: auto;
+  text-align: right;
 }

@@ -1,12 +1,7 @@
 body {
-  background: rgb(250, 225, 255);
-  
+  background: rgb(255, 241, 255);
 }
 
 div {
   height: fit-content;
-}
-
-main {
-padding-top: 100px;
 }

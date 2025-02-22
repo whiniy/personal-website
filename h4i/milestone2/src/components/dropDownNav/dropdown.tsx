@@ -18,7 +18,8 @@ return (
    <div className = {style.dropdown}>
       <ul>
       {links.map((link: string, index: number) => (
-         <li key = {index}
+         <li
+         key = {index}
          onClick = {() => {
             linkSelection(link);
             toggleDropDown();

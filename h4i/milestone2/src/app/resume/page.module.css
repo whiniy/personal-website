@@ -44,3 +44,10 @@
   font-weight: 500;
   font-style: italic;
 }
+
+.navDiv {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}

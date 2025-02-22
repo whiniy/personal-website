@@ -17,23 +17,29 @@
    padding: 0;
  }
 
-.navButton :hover {
-   color: blue;
-}
+ .navButton :hover {
+   color: rgb(127, 0, 114);
+ }
  
 
 .links {
    cursor: pointer;
    text-align: center;
-   margin: 0;
-   border-bottom: 1px solid;
+   margin-top: 5px;
+   margin-bottom: 5px;
    width: auto;
+}
+
+.links :hover {
+   background-color: rgb(127, 0, 114);
+   color: black;
 }
 
 .links div {
    margin: 0;
    padding: 0;
  }
+
 
 .dropdown {
    position: absolute;
@@ -54,3 +60,4 @@
 .buttonDiv {
    width: 100%;
 }
+

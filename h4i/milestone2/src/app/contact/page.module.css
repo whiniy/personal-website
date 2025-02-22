@@ -7,3 +7,10 @@
     padding-left: 55px;
     line-height: 2;
 }
+
+.navDiv {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}

@@ -3,6 +3,7 @@ import connectDB from "../../../backend/helpers/db"
 import ProjectS from "../../../backend/database/projectSchema"
 import ProjectPrev from "@/components/projectPrev/projectPrev"
 import style from "../portfolio/page.module.css"
+import NavMenu from "@/components/dropDownNav/navMenu"
 
 async function getProjects(){
 	await connectDB() // function from db.ts before
@@ -22,7 +23,7 @@ export default async function Project() {
     if (projects == null) {
         return (
             <div>
-                <h1>My Projects!</h1>
+                <h1>PROJECTS</h1>
                 <br></br>
                 <h2>Error finding projects!</h2>
             </div>
@@ -30,10 +31,12 @@ export default async function Project() {
     } else {
         return (
             <div>
-                <h1 className={style.title}>My Projects!</h1>
-                <div>
+                <div className = {style.navDiv}><NavMenu/></div>
+                <h1 className={style.title}>PROJECTS</h1>
+                <div className = {style.prevDiv}>
                     {projects.map(project => 
-                    <div key={project.id}>
+                    <div className = {style.individualPrev}
+                    key={project.id}>
                         <ProjectPrev
                             slug={project.slug} 
                             title={project.title}

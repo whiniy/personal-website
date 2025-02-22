@@ -1,10 +1,12 @@
 import React from "react";
 import style from "../resume/page.module.css"
+import NavMenu from "@/components/dropDownNav/navMenu"
 
 
 export default function Resume() {
     return (
         <div>
+            <div className = {style.navDiv}><NavMenu/></div>
             <a className= {style.downloadPDF} href="/resume.pdf" download>DOWNLOAD RESUME</a>
             <div className= {style.container}>
                 <section>

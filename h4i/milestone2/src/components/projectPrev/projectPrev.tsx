@@ -5,11 +5,13 @@ import style from "../projectPrev/projectPrev.module.css"
 
 export default function ProjectPrev(props: ProjectPreview) {
   return (
-    <div className={style.container}>
-      <Link className={style.a} href={`portfolio/${props.slug}`}>
-        <h3 >{props.title} </h3>
+    <div>
+      <Link className={style.linkBox} href={`portfolio/${props.slug}`}>
+        <div className={style.container}>
+          <h3 >{props.title} </h3>
+          <p className={style.description}>{props.description}</p>
+        </div>
       </Link>
-      <p className={style.description}>{props.description}</p>
     </div>
   );
 }

@@ -6,6 +6,7 @@ import Link from "next/link";
 import CreateComment from "@/components/createComment/createPortfolioComment";
 import Comment from "@/components/comment/comment";
 import { IComment } from "../../../../backend/database/projectSchema";
+import NavMenu from "@/components/dropDownNav/navMenu";
 
 type Props = {
   params: { slug: string };
@@ -32,6 +33,8 @@ export default async function SlugProject(prps: Props) {
     );
   } else {
     return (
+      <div>
+      <div className = {style.navDiv}><NavMenu/></div>
       <div className={style.container}>
         <h2 className={style.blogTitle}>{slugProject.title}</h2>
         <Image
@@ -66,6 +69,7 @@ export default async function SlugProject(prps: Props) {
             <Comment key={index} comment={comment} />
           ))}
         </div>
+      </div>
       </div>
     );
   }

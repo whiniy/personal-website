@@ -31,21 +31,28 @@ export default async function Project() {
     } else {
         return (
             <div>
-                <div className = {style.navDiv}><NavMenu/></div>
+                <div className={style.navDiv}><NavMenu /></div>
                 <h1 className={style.title}>PROJECTS</h1>
-                <div className = {style.prevDiv}>
-                    {projects.map(project => 
-                    <div className = {style.individualPrev}
-                    key={project.id}>
-                        <ProjectPrev
-                            slug={project.slug} 
-                            title={project.title}
-                            description={project.description}
-                        />
-                    </div>
-                    )}
+                <div className={style.prevDiv}>
+                    {[0, 1, 2].map(col => (  
+                        <div key={col} className={style.column}>
+                            {projects
+                                .filter((_, index) => index % 3 === col) 
+                                .map(project => (
+                                    <div className={style.individualPrev} key={project.id}>
+                                        <ProjectPrev
+                                            slug={project.slug}
+                                            title={project.title}
+                                            description={project.description}
+                                        />
+                                    </div>
+                                ))
+                            }
+                        </div>
+                    ))}
                 </div>
             </div>
-        )
+        );
+        
     }
 }

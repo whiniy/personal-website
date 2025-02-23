@@ -1,47 +1,72 @@
 "use client";
 import DropDown from "./dropdown";
-import React, { useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import style from "../dropDownNav/dropDownNav.module.css"
 
 const NavMenu: React.FC = (): JSX.Element => {
    const router = useRouter();
    const [showDropDown, setShowDropDown] = useState<boolean>(false);
+   const [isClicked, setIsClicked] = useState<boolean>(false);
+   const buttonRef = useRef<HTMLButtonElement>(null);
+   const dropdownRef = useRef<HTMLDivElement>(null);
    const links = () => {
-      return ["home", "blog", "portfolio", "resume", "contact"];
+      return ["HOME", "BLOG", "PORTFOLIO", "RESUME", "CONTACT"];
    };
 
-   const toggleDropDown = () => {
-      setShowDropDown(!showDropDown);
+   const toggleDropDown = (force?: boolean) => {
+      setShowDropDown(prev => (typeof force === "boolean" ? force : !prev));
    };
 
-   const dismissHandler = (event: React.FocusEvent<HTMLButtonElement>): void => {
-      if (event.currentTarget === event.target) {
-         setShowDropDown(false);
-      }
+   const handleClick = () => {
+      setIsClicked(prev => !prev);
+      setShowDropDown(true);
    };
 
    const linkSelection = (link: string): void => {
-      router.push(`/${link}`);
+      const formattedLink = `/${link.toLowerCase()}`;
+      router.push(formattedLink);
+      setShowDropDown(false);
+      setIsClicked(false);
 
    };
+
+   useEffect(() => {
+      function handleClickOutside(event: MouseEvent) {
+         if (
+            buttonRef.current &&
+            !buttonRef.current.contains(event.target as Node) &&
+            dropdownRef.current &&
+            !dropdownRef.current.contains(event.target as Node)
+         ) {
+            setShowDropDown(false);
+            setIsClicked(false);
+         }
+      }
+
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => document.removeEventListener("mousedown", handleClickOutside);
+   }, []);
 
    return (
       <div className = {style.buttonDiv}>
          <button 
-      className = {`${showDropDown ? "active" : undefined} ${style.navButton}`}
-      onClick = {(): void => toggleDropDown()}
-      onBlur = {(e: React.FocusEvent<HTMLButtonElement>): void =>
-         dismissHandler(e)
-      }
+         ref = {buttonRef}
+      className = {`${showDropDown ? "active" : ""} ${style.navButton}`}
+      onClick = {handleClick}
+      onMouseEnter={() => !isClicked && toggleDropDown(true)}
+      onMouseLeave={() => !isClicked && toggleDropDown(false)}
       >
          <p>NAVIGATE</p>
          {showDropDown && (
-            <DropDown
-            links = {links()}
-            toggleDropDown = {(): void => toggleDropDown()}
-            linkSelection = {linkSelection}
-            />
+            <div 
+            ref={dropdownRef} 
+            className={style.dropdownWrapper}>
+            <DropDown 
+            links={links()} 
+            toggleDropDown={() => toggleDropDown(false)} 
+            linkSelection={linkSelection} />
+            </div>
          )}
       </button>
       </div>

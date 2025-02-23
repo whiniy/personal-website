@@ -16,9 +16,8 @@ const DropDown: React.FC<DropDownProps> = ({
 
 return (
    <div className = {style.dropdown}>
-      <ul>
       {links.map((link: string, index: number) => (
-         <li
+         <div
          key = {index}
          onClick = {() => {
             linkSelection(link);
@@ -27,9 +26,8 @@ return (
          className = {style.links}
          >
             <div>{link}</div>
-         </li>
+         </div>
       ))}
-   </ul>
    </div>
    
 );

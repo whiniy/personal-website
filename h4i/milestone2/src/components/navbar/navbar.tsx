@@ -1,16 +1,39 @@
+"use client"
 import React from "react";
 import style from "./navbar.module.css";
-import Link from "next/link";
 
-export default function Navbar() {
-  return (
-      <nav className = {style.nav}>
-          <ul>
-              <li className = {style.navA}><Link className = {style.a} href="/blog">Blog</Link></li>
-              <li className = {style.navA}><Link className = {style.a} href="/portfolio">Portfolio</Link></li>
-              <li className = {style.navA}><Link className = {style.a} href="/resume">Resume</Link></li>
-              <li className = {style.navA}><Link className = {style.a} href="/contact">Contact</Link></li>
-          </ul>
-      </nav>
-  );
+interface NavbarProps {
+    scrollToSection: (ref: React.RefObject<HTMLDivElement>) => void;
+    aboutRef: React.RefObject<HTMLDivElement>;
+    portfolioRef: React.RefObject<HTMLDivElement>;
+    resumeRef: React.RefObject<HTMLDivElement>;
+    contactRef: React.RefObject<HTMLDivElement>;
 }
+
+const Navbar: React.FC<NavbarProps> = ({ scrollToSection, aboutRef, portfolioRef, resumeRef, contactRef }) => {
+    return (
+        <div className={style.navDiv}>
+            <nav className={style.nav}>
+                <ul className={style.list}>
+                    <li className={style.navA}>
+                        <button className={style.a} onClick={() => scrollToSection(aboutRef)}>About Me</button>
+                    </li>
+                    <li className={style.navA}><p className={style.dividers}>|</p></li>
+                    <li className={style.navA}>
+                        <button className={style.a} onClick={() => scrollToSection(portfolioRef)}>Portfolio</button>
+                    </li>
+                    <li className={style.navA}><p className={style.dividers}>|</p></li>
+                    <li className={style.navA}>
+                        <button className={style.a} onClick={() => scrollToSection(resumeRef)}>Resume</button>
+                    </li>
+                    <li className={style.navA}><p className={style.dividers}>|</p></li>
+                    <li className={style.navA}>
+                        <button className={style.a} onClick={() => scrollToSection(contactRef)}>Contact</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    );
+};
+
+export default Navbar;

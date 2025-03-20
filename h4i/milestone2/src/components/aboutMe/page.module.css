@@ -1,15 +1,32 @@
-.container {
-   background-color: aquamarine;
-   height: 100%;
-   display: grid;
-   grid-template-columns: repeat(2, 1fr);
-   width: 100%;
-   align-items: center;
+.gridContainer {
+  background-color: rgb(255, 212, 183);
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
 
+.container {
+   height: fit-content;
+   display: grid;
+   grid-template-columns: 900px 1fr;
+   width: 100%;
+   align-items: flex-start;
 }
  
- .item {
-   text-align: center;
-   display: block;
- }
- 
+.text {
+  padding-left: 100px;
+  color: white;
+}
+
+.title {
+  font-size: 60px;
+  margin: 0px;
+}
+
+.description {
+  padding-top: 20px;
+}
+
+.item {
+  text-align: center;
+}

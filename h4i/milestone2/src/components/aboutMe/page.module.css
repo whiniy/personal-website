@@ -1,32 +1,22 @@
-.gridContainer {
-  background-color: rgb(255, 212, 183);
-  height: 100%;
-  display: flex;
-  align-items: center;
+.aboutMeContainer {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
 }
 
-.container {
-   height: fit-content;
-   display: grid;
-   grid-template-columns: 900px 1fr;
-   width: 100%;
-   align-items: flex-start;
-}
- 
 .text {
-  padding-left: 100px;
-  color: white;
+  text-align: left;
+  position: absolute;
+  top: 45%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  width: 450px;
 }
 
 .title {
-  font-size: 60px;
-  margin: 0px;
+  font-size: 50px;
 }
 
 .description {
-  padding-top: 20px;
-}
-
-.item {
-  text-align: center;
+  line-height: 1.25cm;
 }

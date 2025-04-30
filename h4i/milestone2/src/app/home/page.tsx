@@ -4,6 +4,8 @@ import style from "../home/page.module.css";
 import Image from "next/image";
 import Navbar from "@/components/navbar/navbar";
 import AboutMe from "@/components/aboutMe/page";
+import dynamic from "next/dynamic";
+import Portfolio from "@/components/portfolio/page";
 
 export default function Home() {
     const aboutRef = useRef(null);
@@ -44,8 +46,7 @@ export default function Home() {
             </section>
 
             <section ref={portfolioRef} id="portfolio" className={style.section}>
-                <h2>Portfolio Section</h2>
-                <p>Content for the portfolio section...</p>
+                <Portfolio />
             </section>
 
             <section ref={resumeRef} id="resume" className={style.section}>

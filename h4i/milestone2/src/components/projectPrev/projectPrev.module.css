@@ -1,41 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 .container {
-    background-color: rgb(112, 112, 112, 0.3);
-    transition: background-color 0.3s ease;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     height: auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: rgb(87, 0, 169);
-    padding-top: 80px;
-    padding-bottom: 80px;
-
+    color: rgb(0, 0, 0);
 }
-
 
 .linkBox {
-    font-size: 20px;
     text-decoration: none;
-    font-weight: bolder;
 }
 
-.linkBox :hover {
-    background-color: rgb(112, 112, 112, 0.8);
-    color: white;
+.caption {
+    font-size: 20px;
+    padding-left: 10px;
+    font-family: "roboto", sans-serif;
+    font-weight: 500;
+    margin-top: 5px;
+    text-transform: lowercase;
 }
 
-.description {
-    font-size: 16px;
+.username {
+    font-size: 20px;
+    padding-left: 40px;
+    font-family: "roboto", sans-serif;
     font-weight: 500;
 }
 
-
-.container h3, 
-.container p {
-    background-color: transparent !important;
-    color: inherit;
-    transition: none; 
-    width: 80%;
-    text-align: center;
+.numLikes {
+    font-size: 20px;
+    font-family: "roboto", sans-serif;
+    font-weight: 400;
+    padding-left: 10px;
+    margin: 0px;
+    margin-top: 10px;
 }
+
+  .projectPic {
+    object-fit: cover;
+    border-radius: 1%;
+  }
+  

@@ -1,5 +1,5 @@
 .title {
-   font-size: 50px;
+   font-size: 45px;
    padding-left: 55px;
    padding-bottom: 10px;
 }
@@ -61,7 +61,7 @@
 }
 
 .column {
-   width: 330px;
+   width: calc(100% / 4 - 20px); 
    display: flex;
    flex-direction: column;
    gap: 25px; 

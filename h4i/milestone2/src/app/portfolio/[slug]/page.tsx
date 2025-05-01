@@ -34,23 +34,21 @@ export default async function SlugProject(prps: Props) {
   } else {
     return (
       <div>
-      <div className = {style.navDiv}><NavMenu/></div>
-      <div className={style.container}>
-        <h2 className={style.blogTitle}>{slugProject.title}</h2>
+      <div><NavMenu/></div>
+      <div>
+        <h2>{slugProject.title}</h2>
         <Image
           width={0}
           height={0}
           sizes="100vw"
           style={{ width: "50%", height: "auto" }}
-          className={style.homePic}
           src={slugProject.image}
           alt={slugProject.alt}
         ></Image>
         <br></br>
         <br></br>
-        <p className={style.content}>{slugProject.content}</p>
+        <p>{slugProject.content}</p>
         <Link
-          className={style.a}
           href={slugProject.link}
           target="_blank"
           rel="noopener noreferrer"
@@ -63,8 +61,8 @@ export default async function SlugProject(prps: Props) {
         <br></br>
         <CreateComment slug={slugProject.slug} content={"project"} />
 
-        <div className={style.commentsContainer}>
-          <h3 className={style.commentsTitle}>Comments!</h3>
+        <div>
+          <h3>Comments!</h3>
           {slugProject.comments.map((comment: IComment, index: number) => (
             <Comment key={index} comment={comment} />
           ))}

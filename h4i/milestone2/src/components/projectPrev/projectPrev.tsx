@@ -10,7 +10,16 @@ export default function ProjectPrev(props: ProjectPreview) {
     <div>
       <Link className={style.linkBox} href={`portfolio/${props.slug}`}>
         <div className={style.container}>
-          <h1 className={style.username}>winniet <span style={{ color: "rgb(160, 160, 160)" }}>•</span></h1>
+          <div className={style.user}>
+            
+            <Image
+              width={40} height={40} 
+              src="/instaPFP.jpeg"
+              alt="My Insta Profile Pic!"
+              className={style.PFP}
+            />
+            <h1 className={style.username}>winniet <span style={{ color: "rgb(160, 160, 160)" }}>•</span></h1>  
+          </div>
           <div className={style.imageWrapper}>
             <Image
               width={330} height={400} 

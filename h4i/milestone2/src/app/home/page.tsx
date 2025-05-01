@@ -45,7 +45,7 @@ export default function Home() {
                 <AboutMe />
             </section>
 
-            <section ref={portfolioRef} id="portfolio" className={style.section}>
+            <section ref={portfolioRef} id="portfolio" className={style.Psection}>
                 <Portfolio />
             </section>
 

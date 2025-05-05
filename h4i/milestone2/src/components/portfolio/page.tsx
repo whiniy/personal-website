@@ -41,6 +41,7 @@ export default function Portfolio() {
                     slug={project.slug ?? ""}
                     title={project.title ?? "Untitled"}
                     image={project.image ?? "No image"}
+                    date={project.date ?? "No date"}
                   />
                 </div>
               ))}

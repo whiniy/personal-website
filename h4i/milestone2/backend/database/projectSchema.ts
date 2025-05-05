@@ -9,6 +9,7 @@ export type IComment = {
 
 type IProject = {
     slug: string;
+    date: string;
     title: string;
     image: string;
     alt: string;
@@ -26,6 +27,7 @@ const commentProjectSchema = new Schema<IComment>({
 
 const projectSchema = new Schema<IProject>({
     slug: { type: String, required: true },
+    date: { type: String, required: true},
     title: { type: String, required: true },
     image: { type: String, required: true},
     alt: { type: String, required: true},

@@ -3,6 +3,10 @@ import Link from 'next/link';
 import { ProjectPreview } from '../../../backend/database/projectData';
 import style from "../projectPrev/projectPrev.module.css"
 import Image from 'next/image';
+import HeartButton from '../heartButton/page';
+import { Send } from 'lucide-react';
+import { MessageCircle } from 'lucide-react';
+import { Bookmark } from 'lucide-react';
 
 function getDateDiff(date: string): string {
   const inputDate = new Date(date);
@@ -27,7 +31,6 @@ export default function ProjectPrev(props: ProjectPreview) {
   const dateDiff = getDateDiff(props.date);
   return (
     <div>
-      <Link className={style.linkBox} href={`portfolio/${props.slug}`}>
         <div className={style.container}>
           <div className={style.user}>
 
@@ -47,10 +50,24 @@ export default function ProjectPrev(props: ProjectPreview) {
               className={style.projectPic}
             />
           </div>
-          <p className={style.numLikes}>__ likes</p>
+          <div className={style.buttons}>
+            <HeartButton />
+            <Link href={`portfolio/${props.slug}`}>
+              <MessageCircle style={{ transform: "scaleX(-1)" }}
+              className={style.messageCircle} />
+            </Link>
+            <Link href={`portfolio/${props.slug}`}>
+              <Send className={style.send} />
+            </Link>
+            <div className={style.spacer}></div>
+            <Link href={`portfolio/${props.slug}`}>
+              <Bookmark className={style.bookmark} />
+            </Link>
+          </div>
+          
+          <p className={style.numLikes}><b>_ likes</b></p>
           <h3 className={style.caption}><b>winniet</b> {props.title}</h3>
         </div>
-      </Link>
     </div>
   );
 }

@@ -1,0 +1,27 @@
+.heartButton {
+   background: transparent;
+   border: none;
+   outline: none;
+   cursor: pointer;
+   padding: 0px;
+   padding-left: 5px;
+   padding-right: 5px;
+ }
+ 
+ .heartIcon {
+   color: black;
+   width: 30px;
+   height: 30px;
+   fill: none;
+   transition: color 0.2s, fill 0.2s, transform 0.1s;
+ }
+
+ .heartButton:hover .heartIcon:not(.liked) {
+   color: rgb(160, 160, 160);
+ }
+ 
+ .liked {
+   color: red;
+   fill: red;
+ }
+ 
